@@ -14,7 +14,7 @@ exports.seed = function(knex) {
         { name: 'Pizza dough', amount:2, recipe_id:2, ingredientType:7},
         { name: 'Bag(s) of Tortilla Chips', amount:2, recipe_id:3, ingredientType:8},
         { name: 'Bag(s) of Cheese', amount:3, recipe_id:3, ingredientType:6},
-        { name: 'Can(s) of Black Olives', amount:4, recipe_id:3, ingredientType:8}
+        { name: 'Can(s) of Black Olives', amount:4, recipe_id:3, ingredientType:9}
       ]);
     });
 };

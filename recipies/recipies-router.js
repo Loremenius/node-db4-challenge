@@ -18,20 +18,6 @@ router.get("/", (req,res)=>{
         })
 });
 
-router.get("/", (req,res)=>{
-    db.getRecipes()
-        .then(data=>{
-            res.status(200).json(data);
-        })
-        .catch(error=>{
-            console.log(error);
-            res.status(500).json({
-                errorMessage:"error getting recipes", 
-                error: error
-            })
-        })
-});
-
 router.get("/:id/shoppingList", (req,res)=>{
     db.getShoppingList(req.params.id)
         .then(data=>{
@@ -47,7 +33,7 @@ router.get("/:id/shoppingList", (req,res)=>{
 });
 
 router.get("/:id/instructions", (req,res)=>{
-    db.getInstructions()
+    db.getInstructions(req.params.id)
         .then(data=>{
             res.status(200).json(data);
         })
